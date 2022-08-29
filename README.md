@@ -4,7 +4,10 @@ Next Brain Synthetic or nbsyntehtic is a simple but robust tabular synthetic dat
    
    
 ##**Why a basic library for synthetic tabular data generation?**
+
    When it comes to tabular data, the story of GAN have evolved quietly in comparison with image, text and speech generation. There are not many libraries to generate synthetic tabular data and are mostly based in conditional GAN architectures. However, tabular data are by far the most common in the world. Even more, the majority of potential data applications in many industries has to rely in small datasets and, as Data Scinetists use to say, 'poor quality' data. This is the reason why in a data centric approach, the creation of tools for this kind of data is fundamental. We are helping a large hospital in Spain's psychiatric department in a data analysis project. They presented us with a comprehensive research based on data collected over the last ten years. Psychiatric hospitalizations are critical, and this research began with the goal of developing early detection and prevention protocols. We were provided with the results in the form of a spreadsheet with 38 columns and 300 rows. Certainly, that is a small amount of data for any data scientist. It was, however, a challenging effort for them. What are we going to say to them?  Should we tell them that this data is insufficient for using Machine Learning?. Indeed, with this data, the validity of any statistical technique utilized will be put into question. However, this should not be an impediment to maximizing the value from this study by obtaining actionable insights that may be valuable.
    When we have serval dimensions in the original datasets, we have to choose one as an additional 'condition' for our GAN. We will use this dimension or features to condition the generation of the other features. This is certainly practical when we want to use the dataset for a supervised learning problem as a classification or a regression. So we can use our target variable as condition for the GAN.  
 
 ##**Unconditional GAN**
+
+fergrtw
