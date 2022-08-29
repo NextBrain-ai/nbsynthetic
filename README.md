@@ -15,6 +15,6 @@ Next Brain Synthetic or nbsyntehtic is a simple but robust tabular synthetic dat
    
 ## **Statistical tests**
 
-[^1]. Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). Generative adversarial nets. Advances in neural information processing systems, 27.
-[^2].
-[^3]. Sinha, S., Zhang, H., Goyal, A., Bengio, Y., Larochelle, H., & Odena, A. (2020, November). Small-gan: Speeding up gan training using core-sets. In International Conference on Machine Learning (pp. 9005-9015). PMLR.
+[^1]: Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). Generative adversarial nets. Advances in neural information processing systems, 27.
+[^2]:
+[^3]: Sinha, S., Zhang, H., Goyal, A., Bengio, Y., Larochelle, H., & Odena, A. (2020, November). Small-gan: Speeding up gan training using core-sets. In International Conference on Machine Learning (pp. 9005-9015). PMLR.
