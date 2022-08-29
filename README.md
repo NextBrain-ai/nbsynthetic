@@ -1,4 +1,4 @@
-![GAN](https://user-images.githubusercontent.com/23658379/187254041-e5314faa-7cca-4fe5-9920-54df8f7619bf.jpg)
+![GAN](docs/images/GAN.jpg)
 
 # **NBsynthetic**
 A Simple and robust unsupervised synthetic data generator.
