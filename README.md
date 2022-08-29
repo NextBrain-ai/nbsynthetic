@@ -1,7 +1,7 @@
-![GAN](https://user-images.githubusercontent.com/23658379/187251297-2f67de86-9574-4854-974c-17d0d74f0f81.jpg)
+![GAN](https://user-images.githubusercontent.com/23658379/187253175-34660ef4-250c-4647-a3cf-b1dd15efaf66.jpg
 
 # **NBsynthetic**
-A Simple and robust unsupervised synthetic data geberator.
+A Simple and robust unsupervised synthetic data generator.
 
 License: MIT
 
