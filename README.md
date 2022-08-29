@@ -30,8 +30,14 @@ Next Brain Synthetic is a simple but robust tabular synthetic data generation li
 ## **Limitations**
    Unsupervised GANs have been known to be unstable to train and often resulting in generators that produce unrealistic outputs. Some posible solutions have been adopting deep convolutional generative adversarial networks [^12]. But our target with this library are small and medium size datasets so we have desing a network architectura that is robust generating syntehtic dataset up to 5.000 instances. We have tested input dataset with the same number of instances and the newtork is perfectly stable and with an affordable computational cost. Tabular data hasn't to be labeled and the library works with both numerical and boolean inputs even mixed. Concerning the data dimnesionality, the library have been tested with datasets up to 200 dimensions. A limitation emerged from the test is when input data is high dimensional and with only nunerical features available. As a general rule, performance is better when we have dataset with mixed numerical and boolean data.   
 
+# **Requirements**
+NBsynthetic has been developed and runs on Python 3.8.
 
-## **References**
+# **Installation**
+
+
+
+# **References**
 [^1]: Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). Generative adversarial nets. Advances in neural information processing systems, 27.
 [^2]: Arjovsky, M., & Bottou, L. (2017). Towards principled methods for training generative adversarial networks. arXiv preprint arXiv:1701.04862.
 [^3]: Karras, T., Laine, S., Aittala, M., Hellsten, J., Lehtinen, J., & Aila, T. (2020). Analyzing and improving the image quality of stylegan. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition (pp. 8110-8119).
