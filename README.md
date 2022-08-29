@@ -1,6 +1,6 @@
 ![GAN](docs/images/GAN.jpg)
 
-# **NBsynthetic**
+# **NB synthetic**
 A Simple and robust unsupervised synthetic data generator.
 
 License: MIT
