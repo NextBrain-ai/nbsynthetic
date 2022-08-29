@@ -4,5 +4,5 @@ Next Brain Synthetic or nbsyntehtic is a simple but robust tabular synthetic dat
    
    
 ##**Why a basic library for synthetic tabular data generation?
-   When it comes to tabular data, the story of GAN have evolved quietly in comparison with image, text and speech generation. There are not many libraries to generate synthetic tabular data and are mostly based in conditional GAN architectures. 
+   When it comes to tabular data, the story of GAN have evolved quietly in comparison with image, text and speech generation. There are not many libraries to generate synthetic tabular data and are mostly based in conditional GAN architectures. When we have serval dimensions in the original datasets, we have to choose one as an additional 'condition' for our GAN. We will use this dimension or features to condition the generation of the other features. This is certainly practical when we want to use the dataset for a supervised learning problem as a classification or a regression. So e will use our target variable as condition. 
 
