@@ -34,7 +34,7 @@ class GAN(object):
         D_z is the dimensionality of noise prior
         or latent space, z, with prior density pz(z).
         We will use it for noise injection as an effective 
-        strategy to avoidoverfitting and enhancing generalization."""
+        strategy to avoid overfitting and enhancing generalization."""
 
         D_z = int((self.number_of_features * 3) / 4)
         initializer = RandomNormal(mean=0.0, stddev=0.02)
