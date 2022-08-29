@@ -1,4 +1,8 @@
-"""Create a synthetic dataset"""
+"""
+Created on 25/03/2017
+@author: Javier Marin 
+Create a synthetic dataset
+"""
 
 import warnings
 import numpy as np
