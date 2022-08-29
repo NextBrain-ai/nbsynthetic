@@ -12,12 +12,12 @@ Next Brain Synthetic or nbsyntehtic is a simple but robust tabular synthetic dat
 
    As we mentioned, the evolution of GANs has brought interesting ideas as introducing extra information to the discriminator in order to get better accuracy and give more stability to the net. This variant method requires from a target that will condition the generated synthetic data.  If this target data hasn't enough quality (something that's common) we are adding an important bias to our new generated data. Moreover, many datasets has not an only a target feature, because users wants to make predicitions on different features in order to get more insights. So, to condition the synthetic data to a single feature will also add a bias in the generated data. This is why we have decided to use a non conditional GAN or non supervised GAN (also called vanilla GAN) and treat the synthetic data generation as an unsupervised learning problem. Probably the accuracy we get could be improved by condition the GAN with a reliable target variable, but we wanted to provide a versatile tool for a specific target users: small or medium data sets with poor data quality. 
   
+## **Statistical tests**
+   For checking the output accuracy we have to compare the original input data with the obtained synthetic data. So we have to address the problem of comparing samples from two probability distributions. There are different satatistical tests available for that purpose as the Student's t-test or the Wilcoxon signed-rank test (a nonparametric version of the paired Student’s t-test). For numerical features we also implement the Kolmogorov-Smirnov test. All the above test compartes one-to-one the probability distributions of each feature in the inùt datset and the synthetic data. 
+
 
 ## **Limitations**
-   Unsupervised GANs have been known to be unstable to train and often resulting in generators that produce unrealistic outputs. Some posible solutions have been adopting deep convolutional generative adversarial networks [^10]. But our target with this library are small and medium size datasets so we have desing a network architectura that is robust generating syntehtic dataset up to 500 instances. We have tested input dataset with the same number of instances and the newtork is perfectly stable and with an affordable computational cost. 
-
-## **Statistical tests**
-
+   Unsupervised GANs have been known to be unstable to train and often resulting in generators that produce unrealistic outputs. Some posible solutions have been adopting deep convolutional generative adversarial networks [^10]. But our target with this library are small and medium size datasets so we have desing a network architectura that is robust generating syntehtic dataset up to 5.000 instances. We have tested input dataset with the same number of instances and the newtork is perfectly stable and with an affordable computational cost. Tabular data hasn't to be labeled and the library works with both numerical and boolean inputs even mixed. Concerning the datadimensionality, the library have been tested with dataset up to 200 dimensions. A limitation emerged from the test is when input data is high dimensional and with only nunerical features.  
 
 
 ## **References**
