@@ -1,4 +1,8 @@
-"""Vanilla GAN"""
+"""
+Created on 25/03/2017
+@author: Javier Marin 
+Vanilla GAN
+"""
 
 import numpy as np
 from keras.initializers import RandomNormal
