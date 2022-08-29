@@ -2,8 +2,11 @@
 
 # **NBsynthetic**
 A Simple and robust unsupervised synthetic data geberator.
+
 License: MIT
+
 Development Status: Beta
+
 Homepage: [https://github.com/NextBrain-ml/tabular-synthetic-data/]
 
 ## **Overview**
