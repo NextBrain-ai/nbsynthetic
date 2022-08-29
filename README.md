@@ -36,9 +36,15 @@ NBsynthetic has been developed and runs on Python 3.8.
 # **Installation**
 
 # **How to use it**
-## **Load modules**
+## **1. Load modules**
 
-## **Input data**
+## **2. Input data**
+
+## **3. Load GAN**
+
+## **4. Create synthetic dataset**
+
+## **5. Statistical tests
 
 
 # **References**
