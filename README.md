@@ -35,6 +35,10 @@ NBsynthetic has been developed and runs on Python 3.8.
 
 # **Installation**
 
+# **How to use it**
+## **Load modules**
+
+## **Input data**
 
 
 # **References**
