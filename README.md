@@ -1,5 +1,5 @@
 # **Tabular synthetic data generator**
-Next Brain Synthetic or nbsyntehtic is a simple but robust tabular synthetic data generation library. Synthetic data generation is living a golden age in image generation or speech generation applications. Since the introduction of Generative Adversarial Networks by Ian J. Goodfellow in 2017 [^1], this algorithms have became essential in data generation, overperforming the already existing ones like Variation Autoencoders or Boltzman Machines. GANs are one of the most versatile neural network architectures in use today.
+Next Brain Synthetic or nbsyntehtic is a simple but robust tabular synthetic data generation library. Synthetic data generation is living a golden age in image generation or speech generation applications. Since the introduction of Generative Adversarial Networks by Ian J. Goodfellow in 2017 [^1]., this algorithms have became essential in data generation, overperforming the already existing ones like Variation Autoencoders or Boltzman Machines. GANs are one of the most versatile neural network architectures in use today.
    GANs are made up of two components: generators and discriminators. The generator model produces synthetic samples from random noise collected using a distribution, which are passed to the discriminator, which attempts to differentiate between the two. Both the generator and the discriminator enhance their abilities until the discriminator can no longer tell the difference between actual and synthetic samples. The simultaneous training of generator and discriminator models is inherently unstable. Since its presentation, several variants of GAN have been created in order to increase both, its stabiliuty and its accuracy. For example, with the introduction of additional parameters as an extra condition, discriminator has an additional help the Discriminators in the classsification between real and synthetic data. This variant is knowan as Conditional GAN or CGAN and moves the algorithm from the 'unsuperised learning' field to the 'supervised learning' one, by using this additional 'condition'. Another variant of CGAN are the Auxilary Classifier GAN or ACGAN. The list of improived GAN is long and have been succesfully applied in image generarion applications. 
    
    
@@ -15,6 +15,6 @@ Next Brain Synthetic or nbsyntehtic is a simple but robust tabular synthetic dat
    
 ## **Statistical tests**
 
-[^1] Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). Generative adversarial nets. Advances in neural information processing systems, 27.
-[^2]
-[^3] Sinha, S., Zhang, H., Goyal, A., Bengio, Y., Larochelle, H., & Odena, A. (2020, November). Small-gan: Speeding up gan training using core-sets. In International Conference on Machine Learning (pp. 9005-9015). PMLR.
+[^1]. Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). Generative adversarial nets. Advances in neural information processing systems, 27.
+[^2].
+[^3]. Sinha, S., Zhang, H., Goyal, A., Bengio, Y., Larochelle, H., & Odena, A. (2020, November). Small-gan: Speeding up gan training using core-sets. In International Conference on Machine Learning (pp. 9005-9015). PMLR.
