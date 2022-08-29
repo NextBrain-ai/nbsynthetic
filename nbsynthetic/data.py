@@ -1,4 +1,8 @@
-"""Data loading."""
+"""
+Created on 25/03/2017
+@author: Javier Marin 
+Load Data.
+"""
 
 import pandas as pd
 
