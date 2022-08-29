@@ -2,7 +2,8 @@
 
 """
 Created on 25/03/2017
-@author: Javier Marin Dataset preparation following some heuristis.
+@author: Javier Marin 
+Dataset preparation following some heuristis.
 """
 
 import pandas as pd
