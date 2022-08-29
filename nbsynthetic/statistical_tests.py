@@ -1,4 +1,8 @@
-"""Performs several statistical tests"""
+"""
+Created on 25/03/2017
+@author: Javier Marin 
+Performs several statistical tests.
+"""
 
 import gc
 import os
