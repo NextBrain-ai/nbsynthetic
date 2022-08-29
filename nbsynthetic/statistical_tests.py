@@ -1,5 +1,5 @@
 """
-Created on 25/03/2017
+Created on 01/09/2022
 @author: Javier Marin 
 Performs several statistical tests.
 """
