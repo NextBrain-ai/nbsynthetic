@@ -9,7 +9,7 @@ Development Status: Beta
 
 Homepage: [https://github.com/NextBrain-ml/tabular-synthetic-data/]
 
-## **Overview**
+## **1. Overview**
 Next Brain Synthetic is a straightforward but robust tabular synthetic data generating package. In images generation or speech generation applications, synthetic data generation is in a golden era. Since Ian J. Goodfellow introduced Generative Adversarial Networks in 2014 [1], this algorithm has become key in data generation, outperforming existing ones such as Variational Autoencoders and Boltzman Machines. GANs are one of the most versatile neural network architectures currently in use.
    GANs are made up of two parts generators and discriminators. The generator model generates synthetic samples from random noise collected using a distribution, which are then provided to the discriminator, which tries to discern between the two. Both the generator and the discriminator enhance their capabilities until the discriminator can no longer distinguish between real and synthetic samples. Training generator and discriminator models at the same time is generally unstable[^2]. Since its introduction, multiple variations of GAN have been developed to improve both its stability and accuracy. For example, with the addition of new parameters as an extra condition, the discriminator has an additional aid in classifying actual and fake data. This case is known as Conditional GAN or CGAN, and it uses an additional 'condition' to switch the method from 'unsupervised learning' to 'supervised learning'. Another example is the Auxilary Classifier GAN, or ACGAN, is another CGAN version. The list of improved GANs that have been widely utilized in image generation applications is considerable.
 
@@ -30,15 +30,15 @@ Next Brain Synthetic is a straightforward but robust tabular synthetic data gene
 ## **Limitations**
    Unsupervised GANs are known for being difficult to train, resulting in generators that produce nonsensical outputs. Deep convolutional generative adversarial networks have been used in some potential solutions [^12]. However, our target audience for this library is small and medium-sized datasets, so we designed a network architecture capable of generating synthetic datasets (also known as fake datasets, but we don't like that term) up to 5.000 instances. We evaluated input datasets with the same number of instances and found that the net is stable and has a low computational cost. The library accepts numerical and categorical inputs. In terms of data dimension, nbsynthetic has been tested with datasets with up to 200 dimensions. The test revealed a limitation when the input data is highly dimensional and only contains numerical features. In general, performance improves when the dataset has both numerical and category variables.
 
-# **Requirements**
+# **2. Requirements**
 nbsynthetic has been developed and runs on Python 3.8.
 
-# **Installation**
+# **3. Installation**
 pip install nbsynthetic
 
-# **How to use it**
+# **4. Quick setup guide**
 
-## **1. Input data**
+## **4.1. Input data**
   The initial step is to load the data that will be used to fit the GAN. We could do this by importing the `nbsynthetic.data.load data` function and passing in the filename and decimal character as parameters: <br/>
   `df = input data(filename, decimal='.')`<br/>
  Once imported, we must prepare this data with the following conditions.
@@ -64,7 +64,7 @@ An example of how to do these steps using the nbsynthetic package:
    df = SB.nbPreparation(df)
    ```
   
-## **2. Create a GAN instance**
+## **4.2. Create a GAN instance**
    ```python
    from vgan import GAN
    ```
@@ -78,7 +78,7 @@ We have also additional parameters we can change in the GAN (it's not recomended
 - `dropout` (default value = 0.5). Droput value. For more information go [here](https://keras.io/api/layers/).
 - `epochs` (default value = 10). Number of epochs. For more information go [here](https://keras.io/api/models/model_training_apis/).
 
-## **3. Generate a synthetic dataset**
+## **4.3. Generate a synthetic dataset**
 
    Then, we can directly create a synthetic dataset with the desired number of instances or samples. 
    ```python
@@ -91,7 +91,7 @@ We have also additional parameters we can change in the GAN (it's not recomended
        samples = samples
        )
    ```
-## **4. Statistical tests**
+## **4.4. Statistical tests**
    The final step is to compare the synthetic dataset to the input dataset. As said before, we shall employ various statistical tests. The Maximum Mean Discrepancy test is the most important (MMD).
   ```python
   from statistical_tests import mmd_rbf, Wilcoxon, Student_t, Kolmogorov_Smirnov
@@ -135,7 +135,7 @@ We have also additional parameters we can change in the GAN (it's not recomended
    plot_histograms(df, newdf)
    ```
    
-# **References**
+# **5. References**
 [^1]: Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). Generative adversarial nets. Advances in neural information processing systems, 27.
 [^2]: Arjovsky, M., & Bottou, L. (2017). Towards principled methods for training generative adversarial networks. arXiv preprint arXiv:1701.04862.
 [^3]: Karras, T., Laine, S., Aittala, M., Hellsten, J., Lehtinen, J., & Aila, T. (2020). Analyzing and improving the image quality of stylegan. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition (pp. 8110-8119).
