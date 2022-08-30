@@ -45,7 +45,18 @@ pip install nbsynthetic
 - Drop or replace NaN values
 - nbsynthetic does not accept Datetime columns. We have the option to remove it or transform into categorical features. nbsynthetic contain a module that makes this transformation: `data.data_preparation.manage_datetime_columns`, where the arguments are the dataframe and datetime column's name.
 
+nbsyntehtic includes a module that can do all these transformations: `nbsynthetic.data_transformation.SmartBrain`:
+- Correcty assigns datatypes and removes id columns
+- Remove columns with a high number of NaN values, replaces NaN values when is possible, and discards the rest of the instances where replacement was not possible.
+- Finally, this module is able to augment the dataset when possible id dataset lenght is too short. 
 
+
+```
+df = input_data('file_name', decimal=',')
+SB = SmartBrain() 
+df = SB.nbPreparation(df)
+df.dtypes
+```
   
 ## **2. Create a GAN instance**
 
