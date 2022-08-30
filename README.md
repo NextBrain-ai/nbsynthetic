@@ -39,7 +39,7 @@ pip install nbsynthetic
 # **How to use it**
 
 ## **1. Input data**
-  The first step is to load the data wich we will use to fit GAN. We can do it by importing the 'nbsynthetic.data.load_data' function an use the parameters name of filename and decimal character. For example 'df = input_data(filename, decimal='.')' . Once imported we have to prepare this data considering the following conditions.</br>
+  The first step is to load the data wich we will use to fit GAN. We can do it by importing the `nbsynthetic.data.load_data` function an use the parameters name of filename and decimal character. For example `df = input_data(filename, decimal='.')` . Once imported we have to prepare this data considering the following conditions.</br>
 - fnelwe
 - befwgr.  
   
