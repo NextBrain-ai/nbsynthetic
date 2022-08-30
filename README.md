@@ -75,11 +75,11 @@ newdf = synthetic_data(
 The arguments for the GAN instance are: #Arguments
 - GAN : Vanilla GAN
 - df : input data
-- samples:number of instances in the synthetic dataset
+- samples:number of instances in the synthetic dataset <br/>
 We have also additional parameters we can change in the GAN (it's not recomended, by the way).
-- initial_lr = 0.0002(default): Initial learning rate
-- dropout = 0.5(default). Droput value
-- epochs = 10(default). Number of epochs
+- initial_lr = 0.0002(default): Initial learning rate. For more information [here](https://keras.io/api/optimizers/).
+- dropout = 0.5(default). Droput value. For more information [here](https://keras.io/api/layers/).
+- epochs = 10(default). Number of epochs. For more information [here](https://keras.io/api/models/model_training_apis/).
 
 ## **3. Generate a synthetic dataset**
 
