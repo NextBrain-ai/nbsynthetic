@@ -70,13 +70,13 @@ An example of how to do these steps using the nbsynthetic package:
    ```
 
 The arguments for the GAN instance are:
-- GAN : Vanilla GAN
-- df : input data
-- samples:number of instances in the synthetic dataset <br/>
+- `GAN` : Vanilla GAN
+- `df` : input data
+- `samples` : number of instances in the synthetic dataset <br/>
 We have also additional parameters we can change in the GAN (it's not recomended, by the way).
-- initial_lr (default value = 0.0002): Initial learning rate. For more information go [here](https://keras.io/api/optimizers/).
-- dropout (default value = 0.5). Droput value. For more information go [here](https://keras.io/api/layers/).
-- epochs (default value = 10). Number of epochs. For more information go [here](https://keras.io/api/models/model_training_apis/).
+- `initial_lr' (default value = 0.0002): Initial learning rate. For more information go [here](https://keras.io/api/optimizers/).
+- `dropout` (default value = 0.5). Droput value. For more information go [here](https://keras.io/api/layers/).
+- `epochs` (default value = 10). Number of epochs. For more information go [here](https://keras.io/api/models/model_training_apis/).
 
 ## **3. Generate a synthetic dataset**
 
