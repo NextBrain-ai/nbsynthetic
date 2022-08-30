@@ -37,15 +37,17 @@ nbsynthetic has been developed and runs on Python 3.8.
 pip install nbsynthetic
 
 # **How to use it**
-## **1. Load modules**
 
-## **2. Input data**
+## **1. Input data**
+  The first step is to load the data wich we will use to fit GAN. We can do it by importing the nbsynthetic.data.load_data function an use the parameters name of filename and decimal character. For example df = input_data(filename, decimal='.'). Once imported we have to prepare this data considering the following conditions.
+  1.1 fnelwe
+  1.2 
+  
+## **2. Create a GAN instance**
 
-## **3. Load GAN**
+## **3. Generate a synthetic dataset**
 
-## **4. Create synthetic dataset**
-
-## **5. Statistical tests
+## **4. Statistical tests
 
 
 # **References**
