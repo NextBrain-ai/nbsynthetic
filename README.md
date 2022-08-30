@@ -71,6 +71,16 @@ newdf = synthetic_data(
     samples = samples
     )
 ```
+
+The arguments for the GAN instance are: #Arguments
+- GAN : Vanilla GAN
+- df : input data
+- samples:number of instances in the synthetic dataset
+We have also additional parameters we can change in the GAN (it's not recomended, by the way).
+- initial_lr = 0.0002(default): Initial learning rate
+- dropout = 0.5(default). Droput value
+- epochs = 10(default). Number of epochs
+
 ## **3. Generate a synthetic dataset**
 
 ## **4. Statistical tests
