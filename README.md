@@ -51,19 +51,19 @@ nbsyntehtic includes a module that can do all these transformations: `nbsyntheti
 - Finally, this module is able to augment the dataset when possible id dataset lenght is too short. 
 
 An example of how to do make this steps with nbsynthetic library:
-```
-from data import input_data
-from data_preparation import SmartBrain
+   ```
+   from data import input_data
+   from data_preparation import SmartBrain
 
-df = input_data('file_name', decimal=',')
-SB = SmartBrain() 
-df = SB.nbPreparation(df)
-```
+   df = input_data('file_name', decimal=',')
+   SB = SmartBrain() 
+   df = SB.nbPreparation(df)
+   ```
   
 ## **2. Create a GAN instance**
-```
-from vgan import GAN
-```
+   ```
+   from vgan import GAN
+   ```
 
 The arguments for the GAN instance are:
 - GAN : Vanilla GAN
@@ -76,19 +76,41 @@ We have also additional parameters we can change in the GAN (it's not recomended
 
 ## **3. Generate a synthetic dataset**
 
-Then, we can directly create a synthetic dataset with the desired number of instances or samples. 
-```
-from synthetic import synthetic_data
+   Then, we can directly create a synthetic dataset with the desired number of instances or samples. 
+   ```
+   from synthetic import synthetic_data
 
-samples= 2000 #number of samples we want to generate
-newdf = synthetic_data(
-    GAN, 
-    df, 
-    samples = samples
-    )
-```
-## **4. Statistical tests
+   samples= 2000 #number of samples we want to generate
+   newdf = synthetic_data(
+       GAN, 
+       df, 
+       samples = samples
+       )
+   ```
+## **4. Statistical tests**
+   The last step is to check how similar is the synthetic dataset with the input one. We will apply several statistical test as explined before. The most important one is the the Maximum Mean Discrepancy test (MMD).
+  ```
+  from statistical_tests import mmd_rbf, Wilcoxon, Student_t, Kolmogorov_Smirnov
+  
+  """
+  MMD is a statistical tests to determine if two samples 
+  are from different distributions. This statistic test 
+  measures the distance between the means of the two samples 
+  mapped into a reproducing kernel Hilbert space (RKHS).
+  Maximum Mean Discrepancy has found numerous applications in 
+  machine learning and nonparametric testing.
 
+      Args:
+
+         X: ndarray of shape (n_samples_X, n_features)
+         Y: ndarray of shape (n_samples_Y, n_features)
+         gamma: float (default:None)
+
+      Returns:
+          Maximum Mean Discrepancy (MMD) value: float
+   """
+   mmd_rbf(df, newdf, gamma=None)
+  ```
 
 # **References**
 [^1]: Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). Generative adversarial nets. Advances in neural information processing systems, 27.
