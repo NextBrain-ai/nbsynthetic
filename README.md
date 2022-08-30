@@ -113,7 +113,7 @@ We have also additional parameters we can change in the GAN (it's not recomended
   ```
    Additionaly , we can plot each feature's histograms comparing  both, original and synthetic distributions. We use [Plotly Open Source Graphing Library for Python] (https://plotly.com/python/).
 
-   ```
+   ```python
    """ 
        Plot histograms
        Visually compare the distribution plots
