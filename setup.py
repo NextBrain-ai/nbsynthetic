@@ -13,6 +13,7 @@ install_requires = [
     'tensorflow>=2.8.2',
     'keras>=2.8.0',
     'tqdm>=4.64.0',
+    'plotly>=5.5.0',
 
 ]
 
