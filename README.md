@@ -51,7 +51,8 @@ pip install nbsynthetic
 nbsyntehtic includes a module that can perform all of the transformations described above: `nbsynthetic.data_transformation.SmartBrain`:
 - Assigns datatypes correctly and delete id columns.
 - Removes columns with a large percentage of NaN values, replaces NaN values where possible, and reject the remaining when replacement was not possible.
-- Finally, this module is able to augment the dataset when the dataset lenght is too short or the ratio data lenght/number of features is small. 
+- Encodes categorial features.
+- And, finally this module is able to augment the dataset when the dataset lenght is too short or the ratio data lenght/number of features is small. 
 
 An example of how to do these steps using the nbsynthetic package:
    ```python
