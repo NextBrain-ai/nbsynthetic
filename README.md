@@ -111,7 +111,27 @@ We have also additional parameters we can change in the GAN (it's not recomended
    """
    mmd_rbf(df, newdf, gamma=None)
   ```
+   Additionaly , we can plot each feature's histograms comparing  both, original and synthetic distributions. We use [Plotly Open Source Graphing Library for Python] (https://plotly.com/python/).
 
+   ```
+   """ 
+       Plot histograms
+       Visually compare the distribution plots
+       of each feature and shows the Wilcoxon 
+       test values. Use as probability density
+       as histnorm.
+
+         Args:
+
+             X: pd.DataFrame of shape(n_samples_X, n_features)
+             Y: pd.DataFrame of shape (n_samples_Y, n_features)
+
+         Returns:
+             Plotly figure
+   """
+   plot_histograms(df, newdf)
+   ```
+   
 # **References**
 [^1]: Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). Generative adversarial nets. Advances in neural information processing systems, 27.
 [^2]: Arjovsky, M., & Bottou, L. (2017). Towards principled methods for training generative adversarial networks. arXiv preprint arXiv:1701.04862.
