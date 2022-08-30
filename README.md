@@ -39,7 +39,9 @@ pip install nbsynthetic
 # **How to use it**
 
 ## **1. Input data**
-  The initial step is to load the data that will be used to fit the GAN. We could do this by importing the `nbsynthetic.data.load data` function and passing in the filename and decimal character parameters. `df = input data(filename, decimal='.')`, for example. Once imported, we must prepare this data with the following conditions.
+  The initial step is to load the data that will be used to fit the GAN. We could do this by importing the `nbsynthetic.data.load data` function and passing in the filename and decimal character as parameters: <br/>
+  `df = input data(filename, decimal='.')`<br/>
+ Once imported, we must prepare this data with the following conditions.
 
 - String values are not accepted by nbsynthetic. We must encode categorical features as a numeric array with strings. Any of the encoders provided in `sklearn.preprocessing` can be used.
 - We must check that datatypes are properly set. Numerical columns must have dtypes of 'float' or 'int'. Pandas Categorical will be used for categorical columns.
