@@ -1,5 +1,4 @@
-# **Contributors**
-
+Authors
 
 * Javier Marín <javier.marin@softpoint.es>
 * Fernando Pérez <fernando@softpoint.es>
