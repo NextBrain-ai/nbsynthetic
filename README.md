@@ -63,26 +63,30 @@ df = SB.nbPreparation(df)
 ## **2. Create a GAN instance**
 ```
 from vgan import GAN
+```
 
-samples= 2000 #number of samples we need to generate
+The arguments for the GAN instance are:
+- GAN : Vanilla GAN
+- df : input data
+- samples:number of instances in the synthetic dataset <br/>
+We have also additional parameters we can change in the GAN (it's not recomended, by the way).
+- initial_lr (default value = 0.0002): Initial learning rate. For more information go [here](https://keras.io/api/optimizers/).
+- dropout (default value = 0.5). Droput value. For more information go [here](https://keras.io/api/layers/).
+- epochs (default value = 10). Number of epochs. For more information go [here](https://keras.io/api/models/model_training_apis/).
+
+## **3. Generate a synthetic dataset**
+
+Then, we can directly create a synthetic dataset with the desired number of instances or samples. 
+```
+from synthetic import synthetic_data
+
+samples= 2000 #number of samples we want to generate
 newdf = synthetic_data(
     GAN, 
     df, 
     samples = samples
     )
 ```
-
-The arguments for the GAN instance are: #Arguments
-- GAN : Vanilla GAN
-- df : input data
-- samples:number of instances in the synthetic dataset <br/>
-We have also additional parameters we can change in the GAN (it's not recomended, by the way).
-- initial_lr = 0.0002(default): Initial learning rate. For more information [here](https://keras.io/api/optimizers/).
-- dropout = 0.5(default). Droput value. For more information [here](https://keras.io/api/layers/).
-- epochs = 10(default). Number of epochs. For more information [here](https://keras.io/api/models/model_training_apis/).
-
-## **3. Generate a synthetic dataset**
-
 ## **4. Statistical tests
 
 
