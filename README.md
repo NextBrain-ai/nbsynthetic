@@ -50,16 +50,27 @@ nbsyntehtic includes a module that can do all these transformations: `nbsyntheti
 - Remove columns with a high number of NaN values, replaces NaN values when is possible, and discards the rest of the instances where replacement was not possible.
 - Finally, this module is able to augment the dataset when possible id dataset lenght is too short. 
 
-
+An example of how to do make this steps with nbsynthetic library:
 ```
+from data import input_data
+from data_preparation import SmartBrain
+
 df = input_data('file_name', decimal=',')
 SB = SmartBrain() 
 df = SB.nbPreparation(df)
-df.dtypes
 ```
   
 ## **2. Create a GAN instance**
+```
+from vgan import GAN
 
+samples= 2000 #number of samples we need to generate
+newdf = synthetic_data(
+    GAN, 
+    df, 
+    samples = samples
+    )
+```
 ## **3. Generate a synthetic dataset**
 
 ## **4. Statistical tests
