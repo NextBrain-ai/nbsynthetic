@@ -46,14 +46,14 @@ pip install nbsynthetic
 - String values are not accepted by nbsynthetic. We must encode categorical features as a numeric array with strings. Any of the encoders provided in `sklearn.preprocessing` can be used.
 - We must check that datatypes are properly set. Numerical columns must have dtypes of 'float' or 'int'. Pandas Categorical will be used for categorical columns.
 - NaN values must be removed or replaced.
-- nbsynthetic does not accept Datetime columns. We have the option to remove it or transform into categorical features. nbsynthetic contain a module that makes this transformation: `data.data_preparation.manage_datetime_columns`, where the arguments are the dataframe and datetime column's name.
+- nbsynthetic does not accept Datetime columns. We have the option to remove them or transform into categorical features. nbsynthetic contains a module that makes this transformation: `data.data_preparation.manage_datetime_columns`, where the arguments are the dataframe and datetime column's name.
 
-nbsyntehtic includes a module that can do all these transformations: `nbsynthetic.data_transformation.SmartBrain`:
-- Correcty assigns datatypes and removes id columns
-- Remove columns with a high number of NaN values, replaces NaN values when is possible, and discards the rest of the instances where replacement was not possible.
-- Finally, this module is able to augment the dataset when possible id dataset lenght is too short. 
+nbsyntehtic includes a module that can perform all of the transformations described above: `nbsynthetic.data_transformation.SmartBrain`:
+- Assigns datatypes correctly and delete id columns.
+- Removes columns with a large percentage of NaN values, replaces NaN values where possible, and reject the remaining when replacement was not possible.
+- Finally, this module is able to augment the dataset when the dataset lenght is too short or the ratio data lenght/number of features is small. 
 
-An example of how to do make this steps with nbsynthetic library:
+An example of how to do these steps using the nbsynthetic package:
    ```python
    from data import input_data
    from data_preparation import SmartBrain
@@ -91,7 +91,7 @@ We have also additional parameters we can change in the GAN (it's not recomended
        )
    ```
 ## **4. Statistical tests**
-   The last step is to check how similar is the synthetic dataset with the input one. We will apply several statistical test as explined before. The most important one is the the Maximum Mean Discrepancy test (MMD).
+   The final step is to compare the synthetic dataset to the input dataset. As said before, we shall employ various statistical tests. The Maximum Mean Discrepancy test is the most important (MMD).
   ```python
   from statistical_tests import mmd_rbf, Wilcoxon, Student_t, Kolmogorov_Smirnov
   
@@ -100,8 +100,8 @@ We have also additional parameters we can change in the GAN (it's not recomended
   are from different distributions. This statistic test 
   measures the distance between the means of the two samples 
   mapped into a reproducing kernel Hilbert space (RKHS).
-  Maximum Mean Discrepancy has found numerous applications in 
-  machine learning and nonparametric testing.
+  Maximum Mean Discrepancy has been used extensively in
+  Machine Learning and nonparametric testing.
 
       Args:
 
@@ -114,15 +114,14 @@ We have also additional parameters we can change in the GAN (it's not recomended
    """
    mmd_rbf(df, newdf, gamma=None)
   ```
-   Additionaly , we can plot each feature's histograms comparing  both, original and synthetic distributions. We use [Plotly Open Source Graphing Library for Python](https://plotly.com/python/).
+  Furthermore, we can compare the original and synthetic distributions by plotting the histograms of each feature. We use [Plotly Open Source Graphing Library for Python](https://plotly.com/python/).
 
    ```python
    """ 
        Plot histograms
-       Visually compare the distribution plots
-       of each feature and shows the Wilcoxon 
-       test values. Use as probability density
-       as histnorm.
+       Compare the distribution plots of each feature and
+       show the Wilcoxon test p-values. As the histnorm, we 
+       use probability density.
 
          Args:
 
