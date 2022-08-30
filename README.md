@@ -51,7 +51,7 @@ nbsyntehtic includes a module that can do all these transformations: `nbsyntheti
 - Finally, this module is able to augment the dataset when possible id dataset lenght is too short. 
 
 An example of how to do make this steps with nbsynthetic library:
-   ```
+   ```python
    from data import input_data
    from data_preparation import SmartBrain
 
@@ -61,7 +61,7 @@ An example of how to do make this steps with nbsynthetic library:
    ```
   
 ## **2. Create a GAN instance**
-   ```
+   ```python
    from vgan import GAN
    ```
 
@@ -77,7 +77,7 @@ We have also additional parameters we can change in the GAN (it's not recomended
 ## **3. Generate a synthetic dataset**
 
    Then, we can directly create a synthetic dataset with the desired number of instances or samples. 
-   ```
+   ```python
    from synthetic import synthetic_data
 
    samples= 2000 #number of samples we want to generate
@@ -89,7 +89,7 @@ We have also additional parameters we can change in the GAN (it's not recomended
    ```
 ## **4. Statistical tests**
    The last step is to check how similar is the synthetic dataset with the input one. We will apply several statistical test as explined before. The most important one is the the Maximum Mean Discrepancy test (MMD).
-  ```
+  ```python
   from statistical_tests import mmd_rbf, Wilcoxon, Student_t, Kolmogorov_Smirnov
   
   """
