@@ -1,9 +1,14 @@
-# -*- coding: utf-8 -*-
-
-"""
-Created on 25/03/2017
-@author: Javier Marin Dataset preparation following some heuristis.
-"""
+# Copyright 2022 Softpoint Consultores SL. All Rights Reserved.
+#
+# Licensed under MIT License (the "License");
+# you may not use this file except in compliance with the License.
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# ==============================================================================
 
 import random 
 import pandas as pd 
