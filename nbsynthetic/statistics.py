@@ -323,7 +323,7 @@ def plot_histograms(
             autosize=False,
             width=500,
             height=300,
-            title=f'Feature = {c}. <br>Wilcoxon test = {wilcoxon(X[c], Y.sample(len(X))[c])[1]:.5f}',
+            title=f'Feature = {c}. <br>Wilcoxon test p-value= {wilcoxon(X[c], Y.sample(len(X))[c])[1]:.5f}',
             title_font_size=12
         )
         fig.update_traces(opacity=0.65)
