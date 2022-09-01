@@ -234,7 +234,7 @@ def synthetic_data(
     ):
         
         # validate parameters
-        arrays = tuple(np.array(scaled_X)
+        arrays = tuple(np.array(scaled_X))
         if not arrays:
             raise ValueError('`arrays` must not be empty.')
         for a in arrays:
