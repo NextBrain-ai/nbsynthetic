@@ -1,7 +1,9 @@
 ![GAN](docs/images/GAN.jpg)
 
+!\[alt text\](https://badgen.net/github/license/micromatch/micromatch)
 # **NB synthetic**
-An open source project from NextBrain.ml for ample and robust unsupervised synthetic data generator.
+
+#### **An open source project from NextBrain.ml for simple and robust unsupervised synthetic data generator.**
 
 License: MIT
 
