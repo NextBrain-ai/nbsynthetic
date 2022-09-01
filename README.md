@@ -7,7 +7,7 @@ License: MIT
 
 Development Status: Beta
 
-Homepage: [https://github.com/NextBrain-ml/tabular-synthetic-data/]
+Homepage: [https://github.com/NextBrain-ml/nbsynthetic/]
 
 ## **1. Overview**
 Next Brain Synthetic is a straightforward but robust tabular synthetic data generating package. In images generation or speech generation applications, synthetic data generation is in a golden era. Since Ian J. Goodfellow introduced Generative Adversarial Networks in 2014 [1], this algorithm has become key in data generation, outperforming existing ones such as Variational Autoencoders and Boltzman Machines. GANs are one of the most versatile neural network architectures currently in use.
@@ -34,7 +34,11 @@ Next Brain Synthetic is a straightforward but robust tabular synthetic data gene
 nbsynthetic has been developed and runs on Python 3.7 and Python 3.8.
 
 # **3. Installation**
-pip install nbsynthetic
+```
+git clone git@github.com:NextBrain-ml/nbsynthetic/
+cd nbsynthetic
+make install
+```
 
 # **4. Quick setup guide**
 
