@@ -92,13 +92,7 @@ def test_data_transformation():
       n_quantiles = len(df)
 
   numerical_scaler = make_pipeline(
-      # A quantile transform will map a variable’s
-      # probability distribution to another probability
-      # distribution.By performing a rank
-      # transformation, a quantile transform smooths out
-      # unusual distributions and is less influenced by
-      # outliers than scaling methods.
-      # Ref: https://scikit-learn.org/stable/modules/preprocessing.html#preprocessing-transformer
+
       QuantileTransformer(
           n_quantiles=n_quantiles,
           output_distribution='uniform',
