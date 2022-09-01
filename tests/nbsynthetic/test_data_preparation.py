@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import pytest
 from pandas.core.arrays.categorical import CategoricalDtype
 from data_preparation import SmartBrain
 SB = SmartBrain()
@@ -74,3 +75,7 @@ def test_nb_encode():
 	obtained_category =  df['Letter'].dtype
 	
 	assert desired_category == obtained_category
+
+
+if __name__ == '__main__':
+    pytest.main([__file__])

@@ -1,4 +1,4 @@
-﻿from __future__ import absolute_import, division, print_function, unicode_literals
+from __future__ import absolute_import, division, print_function, unicode_literals
 import tensorflow as tf
 from tensorflow.test import TestCase
 import numpy as np
@@ -41,4 +41,4 @@ class DenseLayerTest(TestCase):
 
       sys.argv = sys.argv[:1]
       tf.test.main()
-      """
+      """ 
