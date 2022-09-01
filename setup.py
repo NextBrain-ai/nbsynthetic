@@ -85,7 +85,6 @@ setup(
     long_description_content_type='text/markdown',
     include_package_data=True,
     python_requires='>=3.7',
-    install_requires=[],
     setup_requires=setup_requires,
     test_suite='tests',
     tests_require=test_require,
