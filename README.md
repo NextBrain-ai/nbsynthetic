@@ -65,7 +65,7 @@ An example of how to do these steps using the nbsynthetic package:
 
    df = input_data('file_name', decimal=',')
    SB = SmartBrain() 
-   df = SB.nbPreparation(df)
+   df = SB.nbEncode(df) #GAN input data
    ```
   
 ## **4.2. Create a GAN instance**
@@ -94,7 +94,25 @@ We have also additional parameters we can change in the GAN (it's not recomended
        df, 
        samples = samples
        )
+   
+   Complete code:
+   ```python
+   from data import input_data
+   from data_preparation import SmartBrain
+   from vgan import GAN
+   from synthetic import synthetic_data
+
+   df = input_data('file_name', decimal=',')
+   SB = SmartBrain() 
+   df = SB.nbEncode(df) 
+   samples= 2000 
+   newdf = synthetic_data(
+       GAN, 
+       df, 
+       samples = samples
+       )
    ```
+   
 ## **4.4. Statistical tests**
    The final step is to compare the synthetic dataset to the input dataset. As said before, we shall employ various statistical tests. The Maximum Mean Discrepancy test is the most important (MMD).
   ```python
