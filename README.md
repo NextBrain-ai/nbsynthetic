@@ -116,7 +116,7 @@ We have also additional parameters we can change in the GAN (it's not recomended
 ## **4.4. Statistical tests**
    The final step is to compare the synthetic dataset to the input dataset. As said before, we shall employ various statistical tests. The Maximum Mean Discrepancy test is the most important (MMD).
   ```python
-  from statistics import mmd_rbf, Wilcoxon, Student_t, Kolmogorov_Smirnov
+  from statistics import mmd_rbf
   
   """
   MMD is a statistical tests to determine if two samples 
@@ -136,6 +136,14 @@ We have also additional parameters we can change in the GAN (it's not recomended
           Maximum Mean Discrepancy (MMD) value: float
    """
    mmd_rbf(df, newdf, gamma=None)
+  ```
+  We can also run other statistical tests such as the Wilcoxon, Student t, and Kolmogorov Smirnov tests. We can import as follows:
+  ```python
+  import Wilcoxon, Student_t, Kolmogorov_Smirnov
+  
+  Wilcoxon(df, newdf)
+  Student_t(df, newdf)
+  Kolmogorov_Smirnov(df, newdf)
   ```
   Furthermore, we can compare the original and synthetic distributions by plotting the histograms of each feature. We use [Plotly Open Source Graphing Library for Python](https://plotly.com/python/).
 
