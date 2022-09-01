@@ -61,10 +61,10 @@ setup(
     version='0.1.0',   
     author="Javier Marin (NextBrain.ml)",
     author_email='javier.marin@softpoint.es',
-    packages=find_packages(include=['src/nbsynthetic', 'src/nbsynthetic.*']),
+    packages=find_packages(include=['nbsynthetic', 'nbsynthetic.*']),
     url='https://github.com/NextBrain-ml/nbsynthetic',
     license="MIT license",
-    description="unsupervised synthetic data generator",
+    description="Unsupervised synthetic data generator",
     classifiers=[
         'Development Status :: Beta',
         'Intended Audience :: Mide-level users',
@@ -74,12 +74,11 @@ setup(
         'Programming Language :: Python :: 3.8',
     ], 
     extras_require=extras_require,
-    entry_points={
-        'console_scripts': [
-            'nbsynthetic=nbsynthetic.cli:main'
-        ]
-    },
-    install_package_data=True,
+    #entry_points={
+    #    'console_scripts': [
+    #        'nbsynthetic=nbsynthetic.cli:main'
+    #    ]
+    #},
     install_requires=install_requires,
     long_description=readme + '\n\n',
     long_description_content_type='text/markdown',
