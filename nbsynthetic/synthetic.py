@@ -232,6 +232,21 @@ def synthetic_data(
         initial_lr,
         dropout
     ):
+        
+        # validate parameters
+        arrays = tuple(np.array(scaled_X)
+        if not arrays:
+            raise ValueError('`arrays` must not be empty.')
+        for a in arrays:
+            if not hasattr(a, 'shape'):
+                raise ValueError('`arrays` must be numpy-like arrays.')
+            if len(a.shape) < 1:
+                raise ValueError('`arrays` must be at least 1-d arrays.')
+        data_length = len(arrays[0])
+        for a in arrays[1:]:
+            if len(a) != data_length:
+                raise ValueError('`arrays` must have the same data length.')
+
         gan = GAN(
             number_of_features=n_features,
             learning_rate=initial_lr,
