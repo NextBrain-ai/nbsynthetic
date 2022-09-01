@@ -66,7 +66,7 @@ setup(
     license="MIT license",
     description="Unsupervised synthetic data generator",
     classifiers=[
-        'Development Status :: Beta',
+        'Development Status :: Pre Alpha',
         'Intended Audience :: Mide-level users',
         'License :: MIT License',
         'Natural Language :: English',
