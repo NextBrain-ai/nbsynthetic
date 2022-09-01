@@ -94,7 +94,7 @@ We have also additional parameters we can change in the GAN (it's not recomended
        df, 
        samples = samples
        )
-   
+   ```
    Complete code:
    ```python
    from data import input_data
