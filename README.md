@@ -5,7 +5,7 @@
 ![alt text](https://img.shields.io/badge/python-3.7%20%7C%203.8-orange)
 
 
-#### **An open source project from NextBrain.ml for simple and robust unsupervised synthetic data generator.**
+#### **An open source project from NextBrain.ml for a simple and robust unsupervised synthetic data generator.**
 
 ## **1. Overview**
 Next Brain Synthetic is a straightforward but robust tabular synthetic data generating package. In images generation or speech generation applications, synthetic data generation is in a golden era. Since Ian J. Goodfellow introduced Generative Adversarial Networks in 2014 [1], this algorithm has become key in data generation, outperforming existing ones such as Variational Autoencoders and Boltzman Machines. GANs are one of the most versatile neural network architectures currently in use.
