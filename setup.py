@@ -17,19 +17,19 @@ install_requires = [
 ]
 
 setup_requires = [
-    'pytest-runner>=2.11.1',
+    'pytest-runner>=6.0.0',
 ]
 
 test_require = [
-    'pytest>=3.4.2',
-    'pytest-cov>=2.6.0',
+    'pytest>=7.1.2',
+    'pytest-cov>=3.0.0',
 ]
 
 development_requirements = [
     # general
-    'bumpversion>=0.5.3',
+    'bumpversion>=0.6.0',
     'pip>=22.2.2',
-    'watchdog>=0.8.3',
+    'watchdog>=2.1.9',
 
     # docs
     'm2r>=0.2.0',
@@ -41,16 +41,13 @@ development_requirements = [
     'isort>=4.3.4',
 
     # fix style issues
-    'autoflake>=1.1',
-    'autopep8>=1.3.5',
+    'autoflake>=1.5.1',
+    'autopep8>=1.7.0',
 
     # distribute on PyPI
-    'twine>=1.10.0',
+    'twine>=4.0.1',
     'wheel>=0.37.1',
 
-    # Advanced testing
-    'coverage>=4.5.1',
-    'tox>=2.9.1',
 ]
 
 extras_require = {
