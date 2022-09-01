@@ -1,4 +1,3 @@
-from .data import data
-from .data_preparation import data_preparation
-from .vgan import vgan
-from .synthetic import synthetic
+__author__ = ""NextBrain"""
+__email__ = 'javier.marin@softpoint.es'
+__version__ = '0.1.0'
