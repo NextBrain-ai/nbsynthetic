@@ -61,7 +61,7 @@ setup(
     version='0.1.0',   
     author="Javier Marin (NextBrain.ml)",
     author_email='javier.marin@softpoint.es',
-    packages=find_packages(), #(include=['nbsynthetic', 'nbsynthetic.*']),
+    packages=['nbsynthetic', 'nbsynthetic.*'], #find_packages(), #(include=['nbsynthetic', 'nbsynthetic.*']),
     url='https://github.com/NextBrain-ml/nbsynthetic',
     license="MIT license",
     description="unsupervised synthetic data generator",
