@@ -1,7 +1,9 @@
 ![GAN](docs/images/GAN.jpg)
 
-!\[alt text\](https://badgen.net/github/license/micromatch/micromatch)
-# **NB synthetic**
+![alt text](https://badgen.net/github/license/micromatch/micromatch)
+![alt text](https://img.shields.io/badge/version-0.1.0-green)
+![alt text](https://img.shields.io/badge/python-3.7%20%7C%203.8-orange)
+
 
 #### **An open source project from NextBrain.ml for simple and robust unsupervised synthetic data generator.**
 
