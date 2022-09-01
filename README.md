@@ -37,12 +37,22 @@ git clone git@github.com:NextBrain-ml/nbsynthetic/
 cd nbsynthetic
 make install
 ```
+or directly in a python script:
+```python
+pip install git+https://github.com/NextBrain-ml/nbsynthetic.git
+```
 
 # **4. Quick setup guide**
 
 ## **4.1. Input data**
-  The initial step is to load the data that will be used to fit the GAN. We could do this by importing the `nbsynthetic.data.load data` function and passing in the filename and decimal character as parameters: <br/>
-  `df = input data(filename, decimal='.')`<br/>
+  The initial step is to load the data that will be used to fit the GAN. We could do this by importing:
+  ```python
+  from nbsynthetic.data import input_data
+  ```
+  passing in the filename and decimal character as parameters: <br/>
+  ```python
+  df = input_data(filename, decimal='.')
+  ```
  Once imported, we must prepare this data with the following conditions.
 
 - String values are not accepted by nbsynthetic. We must encode categorical features as a numeric array with strings. Any of the encoders provided in `sklearn.preprocessing` can be used.
@@ -58,8 +68,8 @@ nbsyntehtic includes a module that can perform all of the transformations descri
 
 An example of how to do these steps using the nbsynthetic package:
    ```python
-   from data import input_data
-   from data_preparation import SmartBrain
+   from nbsynthetic.data import input_data
+   from nbsynthetic.data_preparation import SmartBrain
 
    df = input_data('file_name', decimal=',')
    SB = SmartBrain() 
@@ -68,7 +78,7 @@ An example of how to do these steps using the nbsynthetic package:
   
 ## **4.2. Create a GAN instance**
    ```python
-   from vgan import GAN
+   from nbsynthetic.vgan import GAN
    ```
 
 The arguments for the GAN instance are:
@@ -84,7 +94,7 @@ We have also additional parameters we can change in the GAN (it's not recomended
 
    Then, we can directly create a synthetic dataset with the desired number of instances or samples. 
    ```python
-   from synthetic import synthetic_data
+   from nbsynthetic.synthetic import synthetic_data
 
    samples= 2000 #number of samples we want to generate
    newdf = synthetic_data(
@@ -95,10 +105,10 @@ We have also additional parameters we can change in the GAN (it's not recomended
    ```
    Complete code:
    ```python
-   from data import input_data
-   from data_preparation import SmartBrain
-   from vgan import GAN
-   from synthetic import synthetic_data
+   from nbsynthetic.data import input_data
+   from nbsynthetic.data_preparation import SmartBrain
+   from nbsynthetic.vgan import GAN
+   from nbsynthetic.synthetic import synthetic_data
 
    df = input_data('file_name', decimal=',')
    SB = SmartBrain() 
@@ -114,7 +124,7 @@ We have also additional parameters we can change in the GAN (it's not recomended
 ## **4.4. Statistical tests**
    The final step is to compare the synthetic dataset to the input dataset. As said before, we shall employ various statistical tests. The Maximum Mean Discrepancy test is the most important (MMD).
   ```python
-  from statistics import mmd_rbf
+  from nbsynthetic.statistics import mmd_rbf
   
   """
   MMD is a statistical tests to determine if two samples 
@@ -137,7 +147,7 @@ We have also additional parameters we can change in the GAN (it's not recomended
   ```
   We can also run other statistical tests such as the Wilcoxon, Student t, and Kolmogorov Smirnov tests. We can import as follows:
   ```python
-  import Wilcoxon, Student_t, Kolmogorov_Smirnov
+  from nbsynthetic.statistics import Wilcoxon, Student_t, Kolmogorov_Smirnov
   
   Wilcoxon(df, newdf)
   Student_t(df, newdf)
@@ -146,6 +156,7 @@ We have also additional parameters we can change in the GAN (it's not recomended
   Furthermore, we can compare the original and synthetic distributions by plotting the histograms of each feature. We use [Plotly Open Source Graphing Library for Python](https://plotly.com/python/).
 
    ```python
+   from nbsynthetic.statistics import plot_histograms
    """ 
        Plot histograms
        Compare the distribution plots of each feature and
