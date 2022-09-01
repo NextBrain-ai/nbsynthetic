@@ -1,7 +1,7 @@
 ![GAN](docs/images/GAN.jpg)
 
 # **NB synthetic**
-A Simple and robust unsupervised synthetic data generator.
+An open source project from NextBrain.ml for ample and robust unsupervised synthetic data generator.
 
 License: MIT
 
