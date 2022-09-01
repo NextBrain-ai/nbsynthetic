@@ -28,7 +28,7 @@ test_require = [
 development_requirements = [
     # general
     'bumpversion>=0.5.3',
-    'pip>=9.0.1',
+    'pip>=22.2.2',
     'watchdog>=0.8.3',
 
     # docs
@@ -46,7 +46,7 @@ development_requirements = [
 
     # distribute on PyPI
     'twine>=1.10.0',
-    'wheel>=0.30.0',
+    'wheel>=0.37.1',
 
     # Advanced testing
     'coverage>=4.5.1',
