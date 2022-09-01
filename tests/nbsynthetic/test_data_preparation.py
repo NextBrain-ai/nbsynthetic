@@ -17,10 +17,10 @@ def test_nb_types():
 		columns=['Date', 'Letter', 'x', 'y']
 		)
 	desired_types_list = ['datetime64[ns]', 
-												'object', 
-												'int64', 
-												'float64'
-												]
+			      'object', 
+			      'int64', 
+			      'float64'
+			      ]
 	original_types_list = SB.nbTypes(df).dtypes.astype('str').tolist()
 	
 	assert original_types_list == desired_types_list
