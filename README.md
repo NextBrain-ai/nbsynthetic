@@ -125,24 +125,6 @@ We have also additional parameters we can change in the GAN (it's not recomended
    The final step is to compare the synthetic dataset to the input dataset. As said before, we will employ various statistical tests. The Maximum Mean Discrepancy test is the most important (MMD).
   ```python
   from nbsynthetic.statistics import mmd_rbf
-  
-  """
-  MMD is a statistical test to determine if two samples 
-  are from different distributions. This test measures
-  the distance between the means of the two samples 
-  mapped into a reproducing kernel Hilbert space (RKHS).
-  Maximum Mean Discrepancy has been extensively used in
-  Machine Learning and nonparametric testing.
-
-      Args:
-
-         X: ndarray of shape (n_samples_X, n_features)
-         Y: ndarray of shape (n_samples_Y, n_features)
-         gamma: float (default:None)
-
-      Returns:
-          Maximum Mean Discrepancy (MMD) value: float
-   """
    mmd_rbf(df, newdf, gamma=None)
   ```
   We can also run other statistical tests such as the Wilcoxon, Student t, and Kolmogorov Smirnov tests. We can import as follows:
@@ -153,26 +135,12 @@ We have also additional parameters we can change in the GAN (it's not recomended
   Student_t(df, newdf)
   Kolmogorov_Smirnov(df, newdf)
   ```
-  We can also compare the original and synthetic distributions by plotting the histograms of each feature. We use [Plotly Open Source Graphing Library for Python](https://plotly.com/python/).
+  We can also compare the original and synthetic distributions by plotting the histograms of each feature. We use [Plotly Open Source Graphing Library for Python](https://plotly.com/python/). </br>
 
-   ```python
-   from nbsynthetic.statistics import plot_histograms
-   """ 
-       Plot histograms
-       Compare the distribution plots of each feature and
-       show the Wilcoxon test p-values. As the histnorm, we 
-       use probability density.
-
-         Args:
-
-             X: pd.DataFrame of shape(n_samples_X, n_features)
-             Y: pd.DataFrame of shape (n_samples_Y, n_features)
-
-         Returns:
-             Plotly figure
-   """
-   plot_histograms(df, newdf)
-   ```
+```python
+from nbsynthetic.statistics import plot_histograms
+plot_histograms(df, newdf)
+```
    
 # **5. References**
 [^1]: Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). Generative adversarial nets. Advances in neural information processing systems, 27.
