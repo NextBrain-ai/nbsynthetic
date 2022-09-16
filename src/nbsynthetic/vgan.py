@@ -17,6 +17,7 @@ from keras.layers import Dense, Dropout, LeakyReLU, \
 from keras.models import Sequential
 from tensorflow.keras.optimizers import Adam
 from tqdm import tqdm
+np.random.seed(2)
 
 
 class GAN(object):
