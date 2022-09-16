@@ -21,7 +21,7 @@ from sklearn.preprocessing import MinMaxScaler, \
 
 warnings.filterwarnings('ignore', '.*do not.*', )
 pd.options.mode.chained_assignment = None
-
+np.random.seed(2)
 
 def columns_type(df: pd.DataFrame):
     """
