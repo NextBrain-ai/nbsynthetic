@@ -13,6 +13,7 @@ install_requires = [
     'keras>=2.8.0',
     'tqdm>=4.64.0',
     'plotly>=5.5.0',
+    'ripser>=0.6.4'
    
 
 ]
