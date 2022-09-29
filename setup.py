@@ -13,6 +13,8 @@ install_requires = [
     'keras>=2.8.0',
     'tqdm>=4.64.0',
     'plotly>=5.5.0',
+    'ripser>=0.6.4'
+   
 
 ]
 
@@ -58,7 +60,7 @@ extras_require = {
 setup(
     name='nbsynthetic',
     keywords='nbsynthetic',
-    version='0.1.0',   
+    version='0.2.0',   
     author="Javier Marin (NextBrain.ml)",
     author_email='javier.marin@softpoint.es',
     packages=find_packages(include=['nbsynthetic', 'nbsynthetic.*']),
