@@ -59,7 +59,7 @@ extras_require = {
 setup(
     name='nbsynthetic',
     keywords='nbsynthetic',
-    version='0.1.1',   
+    version='0.2.0',   
     author="Javier Marin (NextBrain.ml)",
     author_email='javier.marin@softpoint.es',
     packages=find_packages(include=['nbsynthetic', 'nbsynthetic.*']),
