@@ -125,8 +125,8 @@ We have also additional parameters we can change in the GAN (it's not recomended
 ```python
 from nbsynthetic.statistics import mmd_rbf
 mmd_rbf(df, newdf, gamma=None)
-  ```
-  We can also run other statistical tests such as the Wilcoxon, Student t, and Kolmogorov Smirnov tests. We can import as follows:
+```
+We can also run other statistical tests such as the Wilcoxon, Student t, and Kolmogorov Smirnov tests. We can import as follows:
 ```python
 from nbsynthetic.statistics import Wilcoxon, Student_t, Kolmogorov_Smirnov
 
