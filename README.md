@@ -121,7 +121,7 @@ We have also additional parameters we can change in the GAN (it's not recomended
    ```
    
 ## **4.4. Statistical tests**
-   The final step is to compare the synthetic dataset to the input dataset. As said before, we will employ various statistical tests. The Maximum Mean Discrepancy test is the most important (MMD).
+   The final step is to compare the synthetic dataset to the input dataset. As said before, we will use different statistical tests. The Maximum Mean Discrepancy test is the most important (MMD).
   ```python
   from nbsynthetic.statistics import mmd_rbf
    mmd_rbf(df, newdf, gamma=None)
