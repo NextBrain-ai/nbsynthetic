@@ -204,8 +204,10 @@ def synthetic_data(
 
     if len(df) > 48:
       batch_size = 48
-    else:
+    elif 16 < len(df) < 48:
       batch_size = (int(len(df) / 8) - 1) * 8
+    elif len(df) < 16:
+      batch_size = 8
 
     numerical_columns,\
     categorical_columns = columns_type(df)
