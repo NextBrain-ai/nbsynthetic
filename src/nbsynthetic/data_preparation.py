@@ -122,10 +122,13 @@ class SmartBrain(object):
                 print(f'''We have removed the following columns because has
         too much empty points: {high_nan}''')
 
-            continuous_columns = [c for c in df.columns if
-                                  (df[c].dtype not in ['object', 'datetime64[ns]'] and
-                                   ((len(df[c].value_counts()))/len(df))*100 >= 20)
-                                  ]
+            continuous_columns = [
+                c for c in df.columns
+                if (
+                    df[c].dtype == float or
+                    (df[c].dtype == int and df[c].nunique() / df[c].count() > 0.75)
+                ) and not (pd.api.types.is_datetime64_any_dtype(df[c]))
+            ]
             empty_col = [co for co in continuous_columns if
                          df[co].isnull().cumsum().sum() > 0]
 
