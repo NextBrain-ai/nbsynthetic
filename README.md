@@ -13,7 +13,7 @@
    
 ## **Why a basic library for synthetic tabular data generation**
 
-   hen it comes to tabular data, GAN's journey has evolved quietly in contrast to image[^3], video[^4], and speech[^5] generation. There are a few libraries for creating synthetic tabular data, and they are generally based on conditional GAN architectures[^6][^7][^8]. Tabular data, on the other hand, is by far the most frequent data resource in the world (there are about 700 million active spreadsheet users worldwide). The majority of possible data applications in many industries typically rely on limited datasets and 'low quality' data, as data scientists refer to it. This is why, in a data-centric approach[^9], the development of tools for this type of data is critical. </br>As an example, we are helping a psychiatric hospital with a data analysis project. They came to us with comprehensive research based on data collected over the last ten years. Psychiatric hospitalizations are critical, and this research began with the goal of improving early alerts and prevention protocols. We got the results in the form of a spreadsheet with 38 columns and 300 rows. Certainly, that is a small amount of data for any data scientist, and even less for a statistician. It was, however, a challenging effort for them to collect this data. It was data of 'low quality,' with many empty values (only seven rows had all 38 feature values). Should we tell them that this data is insufficient for using Machine Learning?. Indeed, with this data, the validity of any statistical method will be questioned. However, this should not be an impediment to helping them maximize the value from this effort by obtaining actionable insights that may be valuable. </br>
+   When it comes to tabular data, GAN's journey has evolved quietly in contrast to image[^3], video[^4], and speech[^5] generation. There are a few libraries for creating synthetic tabular data, and they are generally based on conditional GAN architectures[^6][^7][^8]. Tabular data, on the other hand, is by far the most frequent data resource in the world (there are about 700 million active spreadsheet users worldwide). The majority of possible data applications in many industries typically rely on limited datasets and 'low quality' data, as data scientists refer to it. This is why, in a data-centric approach[^9], the development of tools for this type of data is critical. </br>As an example, we are helping a psychiatric hospital with a data analysis project. They came to us with comprehensive research based on data collected over the last ten years. Psychiatric hospitalizations are critical, and this research began with the goal of improving early alerts and prevention protocols. We got the results in the form of a spreadsheet with 38 columns and 300 rows. Certainly, that is a small amount of data for any data scientist, and even less for a statistician. It was, however, a challenging effort for them to collect this data. It was data of 'low quality,' with many empty values (only seven rows had all 38 feature values). Should we tell them that this data is insufficient for using Machine Learning?. Indeed, with this data, the validity of any statistical method will be questioned. However, this should not be an impediment to helping them maximize the value from this effort by obtaining actionable insights that may be valuable. </br>
    Available packages for generated syntehtic data rely on CGAN architectures. When we have several dimensions in the original datasets, we have to choose one as an additional 'condition' for our GAN. We will use this dimension or feature to condition the generation of the other features. This is certainly practical when we want to use the dataset to solve a supervised learning problem, such as, for example, classification or regression. Then we can use our target variable as a condition for the GAN. But it's common that these small datasets have only a single target. Users want to get actionable insights from different features. So, to ask these users for a 'target' feature is something unrealistic. 
 
 ## **Unconditional GANs for tabular data**
@@ -59,7 +59,7 @@ pip install git+https://github.com/NextBrain-ml/nbsynthetic.git
 -NaN values must be removed or replaced. 
 - nbsynthetic does not accept Datetime columns. We have the option to remove them or transform into categorical features. nbsynthetic contains a module that makes this transformation: `data.data_preparation.manage_datetime_columns`, where the arguments are the dataframe and datetime column's name.
 
-nbsyntehtic includes a module that can perform all of the transformations described above: `nbsynthetic.data_transformation.SmartBrain`:
+nbsynthetic includes a module that can perform all of the transformations described above: `nbsynthetic.data_transformation.SmartBrain`:
 -Assigns datatypes correctly and deletes id columns. 
 -Removes columns with a large percentage of NaN values, replaces NaN values where possible; and rejects the remaining when replacement was not possible. 
 -Encodes categorial features. 
@@ -112,7 +112,7 @@ We have also additional parameters we can change in the GAN (it's not recomended
    df = input_data('file_name', decimal=',')
    SB = SmartBrain() 
    df = SB.nbEncode(df) 
-   samples= 2000 
+```   samples= 2000 
    newdf = synthetic_data(
        GAN, 
        df, 
@@ -121,19 +121,19 @@ We have also additional parameters we can change in the GAN (it's not recomended
    ```
    
 ## **4.4. Statistical tests**
-   The final step is to compare the synthetic dataset to the input dataset. As said before, we will use different statistical tests. The Maximum Mean Discrepancy test is the most important (MMD).
-  ```python
-  from nbsynthetic.statistics import mmd_rbf
-   mmd_rbf(df, newdf, gamma=None)
-  ```
-  We can also run other statistical tests such as the Wilcoxon, Student t, and Kolmogorov Smirnov tests. We can import as follows:
-  ```python
-  from nbsynthetic.statistics import Wilcoxon, Student_t, Kolmogorov_Smirnov
-  
-  Wilcoxon(df, newdf)
-  Student_t(df, newdf)
-  Kolmogorov_Smirnov(df, newdf)
-  ```
+   The final step is to compare the synthetic dataset to the input dataset. As said before, we will employ various statistical tests. The Maximum Mean Discrepancy test is the most important (MMD).
+```python
+from nbsynthetic.statistics import mmd_rbf
+mmd_rbf(df, newdf, gamma=None)
+```
+We can also run other statistical tests such as the Wilcoxon, Student t, and Kolmogorov Smirnov tests. We can import as follows:
+```python
+from nbsynthetic.statistics import Wilcoxon, Student_t, Kolmogorov_Smirnov
+
+Wilcoxon(df, newdf)
+Student_t(df, newdf)
+Kolmogorov_Smirnov(df, newdf)
+```
   We can also compare the original and synthetic distributions by plotting the histograms of each feature. We use [Plotly Open Source Graphing Library for Python](https://plotly.com/python/). </br>
 
 ```python
