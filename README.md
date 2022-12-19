@@ -112,7 +112,7 @@ We have also additional parameters we can change in the GAN (it's not recomended
    df = input_data('file_name', decimal=',')
    SB = SmartBrain() 
    df = SB.nbEncode(df) 
-```   samples= 2000 
+   samples= 2000 
    newdf = synthetic_data(
        GAN, 
        df, 
