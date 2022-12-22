@@ -32,13 +32,13 @@ nbsynthetic has been developed and runs on Python 3.7 and Python 3.8.
 
 # **3. Installation**
 ```
-git clone git@github.com:NextBrain-ml/nbsynthetic/
+git clone git@github.com:NextBrain-ai/nbsynthetic/
 cd nbsynthetic
 make install
 ```
 or directly in a python script:
 ```python
-pip install git+https://github.com/NextBrain-ml/nbsynthetic.git
+pip install git+https://github.com/NextBrain-ai/nbsynthetic.git
 ```
 
 # **4. Quick setup guide**
