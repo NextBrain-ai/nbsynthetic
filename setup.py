@@ -14,7 +14,7 @@ install_requires = [
     'tqdm>=4.64.0',
     'plotly>=5.5.0',
     'ripser>=0.6.4'
-   
+
 
 ]
 
@@ -60,11 +60,11 @@ extras_require = {
 setup(
     name='nbsynthetic',
     keywords='nbsynthetic',
-    version='0.2.0',   
+    version='0.2.0',
     author="Javier Marin (NextBrain.ml)",
     author_email='javier.marin@softpoint.es',
     packages=find_packages(include=['nbsynthetic', 'nbsynthetic.*']),
-    url='https://github.com/NextBrain-ml/nbsynthetic',
+    url='https://github.com/NextBrain-ai/nbsynthetic',
     license="MIT license",
     description="Unsupervised synthetic data generator",
     classifiers=[
@@ -74,13 +74,13 @@ setup(
         'Natural Language :: English',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
-    ], 
+    ],
     extras_require=extras_require,
-    #entry_points={
+    # entry_points={
     #    'console_scripts': [
     #        'nbsynthetic=nbsynthetic.cli:main'
     #    ]
-    #},
+    # },
     install_requires=install_requires,
     long_description=readme + '\n\n',
     long_description_content_type='text/markdown',
