@@ -23,7 +23,7 @@ np.random.seed(2)
 class GAN(object):
     """ Vanilla GAN"""
 
-    def __init__(self, number_of_features, learning_rate, dropout):
+    def __init__(self, number_of_features, learning_rate, dropout, show_tqdm: bool = True):
         self.number_of_features = number_of_features
         self.G_model = None
         self.noise_dim = None
@@ -32,6 +32,7 @@ class GAN(object):
         self.gan_model = None
         self.dropout = dropout
         self.number_of_features = number_of_features
+        self.show_tqdm = show_tqdm
         self.build_generator()
         self.build_discriminator()
         self.build_gan()
@@ -171,7 +172,7 @@ class GAN(object):
             bar = tqdm(
                 range(iterations),
                 ascii=True
-            )
+            ) if self.show_tqdm else range(iterations)
 
             for iteration in bar:
                 dis_loss,\
