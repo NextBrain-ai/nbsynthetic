@@ -18,10 +18,15 @@ from sklearn.pipeline import make_pipeline
 from sklearn.compose import make_column_selector as selector
 from sklearn.preprocessing import MinMaxScaler, \
     QuantileTransformer, KBinsDiscretizer
+from typing import Type, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from .vgan import GAN
 
 warnings.filterwarnings('ignore', '.*do not.*', )
 pd.options.mode.chained_assignment = None
 np.random.seed(2)
+
 
 def columns_type(df: pd.DataFrame):
     """
@@ -178,13 +183,14 @@ def generate_data(
 
 
 def synthetic_data(
-    GAN,
+    GAN: 'Type[GAN]',
     df: pd.DataFrame,
     samples: int,
-    initial_lr=0.0002,
-    dropout=0.5,
-    batch_size=48,
-    epochs=10
+    initial_lr: float = 0.0002,
+    dropout: float = 0.5,
+    batch_size: int = 48,
+    epochs: int = 10,
+    show_tqdm: bool = True
 ):
     """Args:
 
@@ -232,7 +238,7 @@ def synthetic_data(
         initial_lr,
         dropout
     ):
-        
+
         # validate parameters
         arrays = tuple(np.array(scaled_X))
         if not arrays:
@@ -251,6 +257,7 @@ def synthetic_data(
             number_of_features=n_features,
             learning_rate=initial_lr,
             dropout=dropout,
+            show_tqdm=show_tqdm,
         )
         G_loss,\
             D_loss = gan.train(
