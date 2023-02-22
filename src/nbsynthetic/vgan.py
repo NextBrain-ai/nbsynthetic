@@ -183,8 +183,9 @@ class GAN(object):
                     )
                 discriminator_loss.append(dis_loss)
                 generator_loss.append(gen_loss)
-                bar.set_description(
-                    f"Epoch ({epoch}/{epochs}) | D. loss: {dis_loss:.2f} | G. loss: {gen_loss:.2f} |")
+                if self.show_tqdm:
+                    bar.set_description(
+                        f"Epoch ({epoch}/{epochs}) | D. loss: {dis_loss:.2f} | G. loss: {gen_loss:.2f} |")
         return generator_loss[-1], discriminator_loss[-1]
 
     def train_models(
